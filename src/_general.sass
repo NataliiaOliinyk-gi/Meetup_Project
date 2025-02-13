@@ -1,0 +1,30 @@
+@use 'mixins'
+@use 'variables'
+
+html 
+    font-size: 1px
+    /* плавний скрол */
+    scroll-behavior: smooth
+    @include mixins.adaptive-rem(1440px, 0.9px)
+    @include mixins.adaptive-rem(1024px, 0.8px)
+    // @include mixins.adaptive-rem(768px, 0.75px)
+    @include mixins.adaptive-rem(420px, 1px)
+    
+
+
+#header 
+    width: 100%
+    max-width: 100%
+    // минимальная высота = высота кнопки плюс падинг и учитывать rem 0.8px
+    // (43+11+11)*(1/0.8)
+    min-height: 80rem 
+    background: variables.$color-white
+    @include mixins.adaptive-min-height(768px, 160rem)
+
+
+.screen-container 
+    max-width: 1196rem
+    margin: 0rem auto
+    @include mixins.adaptive-margin(1196px, 0rem 8%)
+    @include mixins.adaptive-margin(420px, 0rem 14rem)
+    padding: 0rem

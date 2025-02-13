@@ -1,0 +1,176 @@
+// Screen Search events
+    
+@use 'variables'
+@use 'mixins'
+@use 'component_events_info'
+
+%text-button-shared   
+    font-weight: 500
+    font-size: variables.$font-size-button
+    @include mixins.adaptive-font-size(420px, variables.$font-size-button-small)
+    line-height: 143%
+    text-align: center
+
+%transition-shared
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
+    transform-origin: center center
+    &:hover
+        scale: 1.1
+
+.search-screen
+    color: variables.$text-color-light-black
+    h2
+        font-weight: 600
+        font-size: variables.$font-size-h2
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h2-middle)
+        line-height: 129%
+        color: variables.$text-color-black
+
+    h3
+        font-weight: 500
+        font-size: variables.$font-size-h3
+        line-height: 140%
+
+    p
+        font-weight: 500
+        font-size: variables.$font-size-p-small
+        line-height: 133%
+    
+    
+.container-search
+    margin: 77rem 0 82rem 0
+    @include mixins.adaptive-margin(420px, 0 0 68rem 0)
+    position: relative
+
+.search-title
+    @include mixins.flex(12rem, center, start)
+    flex-direction: column 
+    padding: 4px 20rem 22rem 0
+    margin-bottom: 34rem
+    @include mixins.adaptive-margin(420px, 18rem 0)
+    /* Полоса прокрутки */
+    overflow-x: auto
+
+    h2
+        margin-bottom: 4rem  
+    
+    h3
+        border-bottom: 4px solid variables.$bg-color-green
+        color: variables.$text-color-green
+
+.search-filters-box
+    @include mixins.flex(18rem, start)
+    padding-left: 4px
+
+    select
+        padding: 16px
+        padding-right: 35px
+        border-radius: 40px
+        border: none
+        outline: none
+        border-inline: none
+        cursor: pointer
+        appearance: none
+        background-color: variables.$bg-color-dark-white
+        background-image: url('../../assets/icons/icon_arrow.svg')
+        background-repeat: no-repeat
+        background-position: right 14px center
+        font-weight: 500
+        font-size: variables.$font-size-a-const
+        line-height: 100%
+        text-align: center
+        color: variables.$text-color-light-black
+        @extend %transition-shared
+        &:hover
+            scale: 1.05
+            box-shadow: 4px 0px 4px 0px #00000050
+        
+        // option
+        //     text-align: center
+            
+
+
+.display-info
+    width: 604px
+    @include mixins.adaptive-container(768px, 604rem)
+    @include mixins.adaptive-container(420px, 370rem)
+    @include mixins.flex(40rem, center, center)
+    @include mixins.adaptive-gap(420px, 20rem)
+    flex-direction: column
+    text-align: center
+    margin: 10rem 0
+    h3 
+        color: variables.$text-color-red
+
+    button
+        padding: variables.$padding-button
+        height: 42rem
+        border: none
+        cursor: pointer
+        white-space: nowrap
+        background-color: variables.$color-white
+        color: variables.$text-color-light-black
+        @extend %text-button-shared
+        padding: variables.$padding-button
+        border-radius: 8px
+        color: variables.$tabs-color-white
+        background-color: variables.$bg-color-green
+        @extend %transition-shared
+        &:hover
+            background-color: variables.$bg-color-red
+            scale: 1.05
+            box-shadow: 4px 0px 4px 0px #00000050
+
+.display-info--hidden
+    display: none
+
+
+
+.search-map
+    position: absolute
+    top: 0
+    right: 0
+    @include mixins.flex(14rem, center, start)
+    flex-direction: column
+    @include mixins.adaptive-visibility(1024px, none)
+    // @include mixins.adaptive-visibility(768px, none)
+
+.search-map-image
+    position: relative
+    border-radius: 12px
+    width: 350rem
+    height: 285rem
+    @include mixins.adaptive-container(1130px, 280rem)
+    @include mixins.adaptive-height(1130px, 228rem)
+    // @include mixins.adaptive-container(1024px, 280rem)
+    // @include mixins.adaptive-height(1024px, 228rem)
+    background-image: url('../../assets/img/map.png')
+    background-repeat: no-repeat
+    background-position: center center
+    @include mixins.flex(14rem, center, center)
+
+    button
+        @include mixins.flex(8px, center, center)
+        border: 2px solid variables.$color-green
+        border-radius: 8px
+        padding: 10rem 20rem
+        @include mixins.adaptive-padding(1024px, 8rem 16rem)
+        font-weight: 500
+        font-size: 14px
+        line-height: 143%
+        text-align: center
+        color: variables.$color-green
+        background: variables.$color-white
+        @extend %transition-shared
+        &:hover
+            box-shadow: 4px 0px 4px 0px #00000050
+        &::after
+            content: url('../../assets/icons/icon_fill.svg')
+    img
+        position: absolute
+        top: 11px
+        right: 15px
+        @extend %transition-shared
+        &:hover
+            scale: 1.2
+            box-shadow: 4px 0px 4px 0px #00000050

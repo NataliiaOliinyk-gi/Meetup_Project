@@ -1,0 +1,111 @@
+// Events INFO
+    
+@use 'variables'
+@use 'mixins'
+
+%transition-shared
+    transition: 3s cubic-bezier(0, 1, 0.5, 1)
+    transform-origin: center center
+    &:hover
+        scale: 1.1
+
+%icons-before-shared
+    display: inline-flex 
+    gap: 3px
+    align-items: center
+    &::before
+        display: inline-block
+        width: 18px
+        height: 18px
+        @include mixins.adaptive-container(420px, 10px)
+        @include mixins.adaptive-height(420px, 10px)
+
+.events-info
+    @include mixins.flex(17rem, center, start)
+    flex-direction: column
+    width: 604px
+    @include mixins.adaptive-container(768px, 100%)
+    @include mixins.adaptive-container(420px, 370rem)
+
+#eventsInfo
+    h5
+        font-weight: 500
+        font-size: variables.$font-size-p-const
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h5-small)
+        line-height: 150%
+        color: variables.$text-color-light-black
+        &:hover
+            color: variables.$text-color-red
+
+    p
+        font-weight: 500
+        font-size: variables.$font-size-a-const
+        @include mixins.adaptive-font-size(420px, variables.$font-size-p-adaptiv8)
+        line-height: 143%
+        color: variables.$text-color-grey
+
+
+.event-info
+    position: relative
+    width: 100%
+    cursor: pointer
+    @include mixins.flex(12rem, start, start)
+    border-top: 1px solid #d9d9d9
+    padding: 16rem 0 0 0
+    @include mixins.adaptive-padding(420px, 10rem 0 0 0)
+
+.event-image-box
+    height: 144px
+    @include mixins.adaptive-height(420px, 86rem)
+    @extend %transition-shared
+    
+    .event-image
+        border-radius: 8px
+        width: 159px
+        @include mixins.adaptive-container(420px, 97rem)
+
+
+.event-descriptions
+    @include mixins.flex(4px, center, start)
+    flex-direction: column
+
+
+#eventsInfo
+    .event-date
+        letter-spacing: -0.02em
+        text-transform: uppercase
+        color: variables.$text-color-braun-grey
+
+.item-category
+    @include mixins.flex(4px, start)
+
+.event-attendees
+    margin-top: 48rem
+    @include mixins.adaptive-margin(420px, 28rem 0 0 0)
+
+    
+.event-online
+    position: absolute
+    top: 23rem
+    left: 8rem
+    @include mixins.adaptive-position(420px, relative)
+    @include mixins.adaptive-top(420px, auto)
+    @include mixins.adaptive-left(420px, auto)
+    @include mixins.flex(0)
+    border-radius: 4px
+    padding: 2px 4px
+    @include mixins.adaptive-padding(420px, 2px 4px 2px 0)
+    background-color: variables.$color-white 
+    
+    .title-p
+        font-weight: 500
+        font-size: variables.$font-size-p-const-small
+        @include mixins.adaptive-font-size(420px, variables.$font-size-p-adaptiv7)
+        line-height: 133%
+        color: variables.$text-color-grey
+        text-align: center
+        @extend %icons-before-shared
+        &::before
+            content: url('../../assets/icons/icon_online.svg')
+            @include mixins.adaptive-content(420px, url('../../assets/icons/icon_online_small.svg'))
+            

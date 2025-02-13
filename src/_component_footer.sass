@@ -1,0 +1,112 @@
+// Footer
+    
+@use 'variables'
+@use 'mixins'
+
+%text-a-shared
+    text-decoration: none
+    outline: none
+    font-weight: 400
+    line-height: 143%
+    font-size: variables.$font-size-a-const
+    color: variables.$text-color-light-grey
+
+%transition-shared
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
+    transform-origin: center center
+    &:hover
+        scale: 1.1
+
+
+footer
+    background-color: variables.$bg-color-black
+
+.container-footer
+    padding-bottom: 40rem
+    @include mixins.adaptive-padding(420px, 0rem 0rem 36rem 0rem)
+
+.footer-own-group
+    width: 100%
+    @include mixins.flex(16rem, flex-start)
+    padding: 25rem 0
+    border-bottom: 1px solid variables.$color-grey
+    @include mixins.adaptive-padding(420px, 25rem 0 0 0)
+    @include mixins.adaptive-border-bottom(420px, none)
+    @include mixins.adaptive-flex(420px, space-between, center)
+
+    .footer-own-group-p
+        @include mixins.adaptive-padding(420px, 25rem 0)
+        @include mixins.adaptive-border-bottom(420px)
+        @include mixins.adaptive-container(420px, 80%)
+        p
+            font-weight: 600
+            line-height: 150%
+            font-size: variables.$font-size-p-const
+            color: variables.$color-dark-white
+
+    button
+        padding: 10rem 14rem
+        cursor: pointer
+        white-space: nowrap
+        border: 2px solid variables.$color-white
+        border-radius: 6px
+        background-color: variables.$bg-color-black
+        font-size: variables.$font-size-p-const
+        font-weight: 500
+        line-height: 150%
+        text-align: center
+        color: variables.$tabs-color-white
+        @extend %transition-shared
+
+.footer-information
+    @include mixins.flex(0, flex-start, flex-start)
+
+.footer-content
+    width: 33%
+    @include mixins.flex(7rem, center, flex-start)
+    flex-direction: column
+    margin: 25rem 0
+
+.footer-p
+    font-weight: 400
+    line-height: 150%
+    font-size: variables.$font-size-p-const
+    color: variables.$text-color-dark-white
+
+.footer-descriptions
+    @include mixins.flex(7rem, center, flex-start)
+    flex-direction: column
+    a
+        @extend %text-a-shared
+        @extend %transition-shared
+
+.footer-social-networks
+    @include mixins.flex(12rem, center, flex-start)
+    flex-direction: column
+    padding-bottom: 48rem
+    
+.footer-social-networks-icons
+    width: 100%
+    @include mixins.flex(0, space-between, center)
+    a
+        @extend %transition-shared
+    
+.footer-icons
+    @include mixins.flex(32rem, flex-start)
+
+.footer-pay
+    @include mixins.flex(22rem, flex-end)
+    @include mixins.adaptive-visibility(620px, none)
+
+.footer-about
+    @include mixins.flex(24rem, flex-start)
+    p
+        @extend %text-a-shared
+        color: variables.$color-white
+
+    a
+        @extend %text-a-shared
+        @extend %transition-shared
+        @include mixins.adaptive-visibility(768px, none)
+       
+

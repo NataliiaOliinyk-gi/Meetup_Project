@@ -1,0 +1,106 @@
+@use 'variables'
+
+
+@mixin flex($gap, $justify-content: center, $align-items: center)
+    display: flex
+    justify-content: $justify-content
+    align-items: $align-items
+    gap: $gap
+
+@mixin transition($time: 400ms)
+    transition: all $time
+
+
+// Adaptive   
+
+@mixin adaptive-rem($max-width, $font-size)
+    @media (max-width: $max-width) 
+        font-size: $font-size 
+
+@mixin adaptive-container($max-width, $width)
+    @media (max-width: $max-width) 
+        width: $width
+
+@mixin adaptive-height($max-width, $height)
+    @media (max-width: $max-width) 
+        height: $height
+
+@mixin adaptive-min-height($max-width, $min-height)
+    @media (max-width: $max-width) 
+        min-heightt: $min-height
+
+@mixin adaptive-flex-wrap($max-width, $flex-wrap)
+    @media (max-width: $max-width) 
+        flex-wrap: $flex-wrap
+
+@mixin adaptive-oder($max-width, $order)
+    @media (max-width: $max-width) 
+        order: $order
+
+@mixin adaptive-padding($max-width, $padding)
+    @media (max-width: $max-width) 
+        padding: $padding
+
+@mixin adaptive-margin($max-width, $margin)
+    @media (max-width: $max-width) 
+        margin: $margin
+       
+@mixin adaptive-gap($max-width, $gap)
+    @media (max-width: $max-width) 
+        gap: $gap
+
+@mixin adaptive-flex($max-width, $justify-content, $align-items)
+    @media (max-width: $max-width) 
+        justify-content: $justify-content
+        align-items: $align-items
+
+@mixin adaptive-flex-direction($max-width, $flex-direction)
+    @media (max-width: $max-width) 
+        flex-direction: $flex-direction
+
+@mixin adaptive-align-self($max-width, $align-self)
+    @media (max-width: $max-width) 
+        align-self: $align-self
+
+@mixin adaptive-visibility($max-width, $display)
+    @media (max-width: $max-width) 
+        display: $display
+
+@mixin adaptive-font-size($max-width, $font-size)
+    @media (max-width: $max-width) 
+        font-size: $font-size
+
+@mixin adaptive-text-align($max-width, $text-align)
+    @media (max-width: $max-width) 
+        text-align: $text-align
+
+@mixin adaptive-border-bottom($max-width, $border-bottom: 1px solid variables.$color-grey)
+    @media (max-width: $max-width) 
+        border-bottom: $border-bottom
+
+@mixin adaptive-border-top($max-width, $border-top: 1px solid variables.$color-grey)
+    @media (max-width: $max-width) 
+        border-top: $border-top
+
+@mixin adaptive-top($max-width, $top)
+    @media (max-width: $max-width) 
+        top: $top
+
+@mixin adaptive-left($max-width, $left)
+    @media (max-width: $max-width) 
+        left: $left
+
+@mixin adaptive-content($max-width, $content)
+    @media (max-width: $max-width) 
+        content: $content
+
+@mixin adaptive-position($max-width, $position)
+    @media (max-width: $max-width) 
+        position: $position
+
+@mixin adaptive-font($max-width, $font-weight, $font-size, $line-height, $color)
+    @media (max-width: $max-width) 
+        font-weight: $font-weight
+        font-size: $font-size
+        line-height: $line-height
+        color: $color

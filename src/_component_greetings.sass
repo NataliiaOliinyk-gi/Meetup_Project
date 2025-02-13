@@ -1,0 +1,74 @@
+// section Greetings Screen
+    
+@use 'variables'
+@use 'mixins'
+ 
+
+
+    
+.container-greetings
+    width: 100%
+    @include mixins.flex(46rem, start)
+    margin: 61rem 0 96rem 0
+    @include mixins.adaptive-flex-wrap(768px, wrap)
+    @include mixins.adaptive-flex(768px, center, center)
+    @include mixins.adaptive-margin(768px, 40rem 0 50rem 0)
+    @include mixins.adaptive-margin(420px, 30rem 0 20rem 0)
+
+.greetings-info
+    width: 50%
+    @include mixins.adaptive-container(768px, 100%)
+    @include mixins.flex(24rem, center, start)
+    flex-direction: column
+    color: variables.$text-color-light-black
+    @include mixins.adaptive-gap(768px, 20rem)
+
+    h1
+        font-weight: 700
+        font-size: variables.$font-size-h1
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h1-small)
+        line-height: 124%
+        @include mixins.adaptive-text-align(768px, center) 
+
+    p
+        font-weight: 400
+        font-size: variables.$font-size-p
+        @include mixins.adaptive-font-size(420px, variables.$font-size-p-small)
+        line-height: 150%
+        @include mixins.adaptive-text-align(768px, center)
+
+
+    button
+        border: none
+        cursor: pointer
+        white-space: nowrap
+        padding: variables.$padding-button
+        border-radius: 8px
+        background-color: variables.$bg-color-green
+        @include mixins.adaptive-align-self(420px, center)
+        transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
+        transform-origin: center center
+        &:hover
+            background-color: variables.$bg-color-red
+            scale: 1.05
+            box-shadow: 4px 0px 4px 0px #00000050
+
+        a
+            text-decoration: none
+            font-weight: 400
+            font-size: variables.$font-size-a-large
+            @include mixins.adaptive-font-size(420px, variables.$font-size-a)
+            line-height: 150%
+            text-align: center
+            color: variables.$tabs-color-white
+
+        
+        
+.greetings-image
+    
+    img
+        width: 379rem
+        height: 269rem
+        @include mixins.adaptive-container(420px, 215rem)
+        @include mixins.adaptive-height(420px, 152rem)
+    

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetup. Search events</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+
+        <section class="search-screen">
+            <div class="screen-container">
+
+                <div class="container-search">
+
+                    <div class="search-title">
+                        <h2>Events near New York, NY</h2>
+                        <h3>Events</h3>
+                        <div class="search-filters-box">
+                            <select name="select-type" id="selectType">
+                                <option value="any_type">Any type</option>
+                                <option value="online">Online</option>
+                                <option value="offline">Offline</option>
+                            </select>
+                            <select name="select-distance" id="selectDistance">
+                                <option value="any_distance">Any distance</option>
+                                <option value="5">5 km</option>
+                                <option value="10">10 km</option>
+                                <option value="15">15 km</option>
+                                <option value="25">25 km</option>
+                                <option value="50">50 km</option>
+                                <option value="75">75 km</option>
+                                <option value="100">100 km</option>
+                            </select>
+
+                            <select name="select-category" id="selectCategory">
+                                <option value="any_category">Any category</option>
+                                <option value="Social Activities">Social Activities</option>
+                                <option value="Hobbies and Passions">Hobbies and Passions</option>
+                                <option value="Health and Wellbeing">Health and Wellbeing</option>
+                                <option value="Business">Business</option>
+                                <option value="Technology">Technology</option>
+                            </select>
+
+                            <select name="select-day" id="selectDay">
+                                <option value="any_date">Any date</option>
+                                <option value="13 Mar 2024 11:00:00">Mar 13, 11:00 AM</option>
+                                <option value="14 Mar 2024 11:00:00">Mar 14, 11:00 AM</option>
+                                <option value="14 Mar 2024 20:00:00">Mar 14, 8:00 PM</option>
+                                <option value="16 Mar 2024 14:00:00">Mar 16, 2:00 PM</option>
+                                <option value="23 Mar 2024 11:30:00">Mar 23, 11:30 AM</option>
+                                <option value="30 Mar 2024 14:00:00">Mar 30, 2:00 PM</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="search-container">
+                        <div id="displayInfo" class="display-info display-info--hidden"></div>
+                        <div id="eventsInfo" class="events-info"></div>
+                    </div>
+
+                    <div id="searchMap" class="search-map">
+                        <div class="search-map-description">
+                            <p>Find events near</p>
+                            <h3>New York, NY</h3>
+                        </div>
+                        <div class="search-map-image">
+                            <button>Browse in map <span></span></button>
+                            <img id="mapClose" src="../assets/icons/icon_close.svg" alt="icon close">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../js/loadComponents.js"></script>
+
+    <script src="../js/search_events.js"></script>
+</body>
+
+</html>

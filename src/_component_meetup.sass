@@ -1,0 +1,302 @@
+// section Meetup Screen
+
+@use 'variables'
+@use 'mixins'
+
+%transition-shared
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
+    transform-origin: center center
+    &:hover
+        scale: 1.1
+
+.container-meetup
+    @include mixins.flex(64rem, center, flex-start)
+    @include mixins.adaptive-gap(420px, 17rem)
+    flex-direction: column
+
+    h2
+        font-weight: 600
+        font-size: variables.$font-size-h2
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h2-small)
+        line-height: 129%
+
+    h3
+        font-weight: 600
+        font-size: variables.$font-size-h3
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h3-small)
+        line-height: 140%
+        color: variables.$color-light-black
+
+    h4
+        font-weight: 600
+        font-size: variables.$font-size-h4
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h4-small)
+        line-height: 156%
+        color: variables.$color-light-black
+
+    p
+        font-weight: 400
+        font-size: variables.$font-size-p
+        @include mixins.adaptive-font-size(420px, variables.$font-size-p-small)
+        line-height: 150%
+
+    a
+        text-decoration: none
+        font-weight: 500
+        font-size: variables.$font-size-a-large
+        @include mixins.adaptive-font-size(420px, variables.$font-size-a-small)
+        line-height: 150%
+        color: variables.$text-color-green
+        @extend %transition-shared
+        &:hover
+            color: variables.$text-color-red
+
+// Join Meetup
+
+.join-meetup
+    width: 100%
+    background-color: variables.$bg-color-ligth-green-08
+    padding: 20rem 56rem
+    @include mixins.adaptive-padding(420px, 16rem 11rem 32rem 15rem)
+    @include mixins.flex(16rem, center, start)
+    flex-direction: column
+    color: variables.$text-color-light-black
+    flex-wrap: wrap
+    @include mixins.adaptive-flex-wrap(768px, nowrap)
+    height: 236rem
+    @include mixins.adaptive-height(768px, auto)
+
+    h2
+        width: 65%
+        @include mixins.adaptive-container(768px, 100%)
+        @include mixins.adaptive-oder(768px, 1)
+
+    p
+        width: 60%
+        @include mixins.adaptive-container(768px, 100%)
+        @include mixins.adaptive-oder(768px, 3)
+        @include mixins.adaptive-text-align(768px, center)
+
+    button
+        border: none
+        cursor: pointer
+        white-space: nowrap
+        padding: 8rem 66rem
+        font-weight: 500
+        border-radius: 8px
+        background-color: variables.$bg-color-cold-red
+        @include mixins.adaptive-oder(768px, 4)
+        @include mixins.adaptive-align-self(768px, center)
+        @extend %transition-shared
+        &:hover
+            background-color: variables.$bg-color-green
+            scale: 1.05
+            box-shadow: 4px 0px 4px 0px #00000050
+        a
+            color: variables.$tabs-color-white
+            font-size: variables.$font-size-p-const
+            line-height: 150%
+            text-align: center
+            &:hover
+                color: variables.$tabs-color-white
+
+.join-meetup-image
+    width: 35%
+    @include mixins.flex(0)
+    @include mixins.adaptive-container(768px, 100%)
+    @include mixins.adaptive-oder(768px, 2)
+
+    img
+        width: 341rem
+        height: 196rem
+        @include mixins.adaptive-container(920px, 300rem)
+        @include mixins.adaptive-container(420px, 238rem)
+        @include mixins.adaptive-height(420px, 136rem)
+
+// Top categories
+
+.top-categories
+    @include mixins.flex(24rem, center, flex-start)
+    flex-direction: column
+    @include mixins.adaptive-margin(420px, -30rem 0rem 0rem 0rem)
+
+.categories
+    @include mixins.flex(16rem, center, center)
+    @include mixins.adaptive-gap(1024px, 11rem 23rem)
+    flex-wrap: wrap
+
+.categorie
+    @include mixins.flex(6rem)
+    flex-direction: column
+    border-radius: 8px
+    width: 135px
+    height: 112px
+    padding: 16rem
+    background-color: variables.$bg-color-ligth-green-08
+    cursor: pointer
+    @extend %transition-shared
+    transition: 3s cubic-bezier(0, 1, 0.5, 1)
+    &:hover
+        box-shadow: 4px 0px 4px 0px #00000050
+
+    img
+        width: 20px
+        height: 20px
+
+    p
+        font-weight: 500
+        font-size: variables.$font-size-p-const
+        text-align: center
+
+    // Popular cities
+
+.popular-cities
+    @include mixins.flex(28rem, center, flex-start)
+    @include mixins.adaptive-gap(420px, 6rem)
+    flex-direction: column
+    @include mixins.adaptive-margin(420px, 31rem 0rem 0rem 0rem)
+    @include mixins.adaptive-padding(420px, 0 0 0 12rem)
+
+.cities-description
+    @include mixins.flex(16rem, center, flex-start)
+    flex-direction: column
+
+    p
+        color: variables.$text-color-grey
+
+.cities
+    @include mixins.flex(42rem, center, center)
+    @include mixins.adaptive-gap(420px, 18rem)
+    flex-wrap: wrap
+
+.city
+    @include mixins.flex(24rem, center, center)
+    @include mixins.adaptive-gap(420px, 18rem)
+    flex-direction: column
+    cursor: pointer
+    @extend %transition-shared
+    transition: 3s cubic-bezier(0, 1, 0.5, 1)
+
+    &:last-child
+        @include mixins.adaptive-visibility(1196px, none)
+        @include mixins.adaptive-visibility(900px, flex)
+        @include mixins.adaptive-visibility(666px, none)
+
+    img
+        width: 205rem
+        height: 205rem
+        @include mixins.adaptive-container(420px, 153rem)
+        @include mixins.adaptive-height(420px, 153rem)
+
+    h3
+        text-align: center
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h3-middle)
+
+// How Meetup works
+
+.how-works
+    @include mixins.flex(24rem, center, flex-start)
+    @include mixins.adaptive-gap(420px, 18rem)
+    flex-direction: column
+    @include mixins.adaptive-margin(420px, 26rem 0rem 0rem 0rem)
+    @include mixins.adaptive-padding(420px, 0 0 0 12rem)
+
+.container-how-works
+    @include mixins.flex(32rem, center, center)
+    @include mixins.adaptive-flex-direction(768px, column)
+    @include mixins.adaptive-gap(768px, 12rem)
+
+.how
+    width: 50%
+    @include mixins.adaptive-container(768px, 100%)
+    background-color: variables.$bg-color-ligth-green-08
+    @include mixins.flex(24rem, flex-start, flex-start)
+    @include mixins.adaptive-gap(420px, 15rem)
+    padding: 32rem 112rem 24rem 24rem
+    @include mixins.adaptive-padding(420px, 20rem 70rem 15rem 15rem)
+
+.description
+    @include mixins.flex(16rem, center, flex-start)
+    @include mixins.adaptive-gap(420px, 10rem)
+    flex-direction: column
+
+    h3
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h3-mini)
+    p
+        @include mixins.adaptive-font-size(420px, variables.$font-size-p-mini)
+    a
+        @include mixins.adaptive-font-size(420px, variables.$font-size-a-mini)
+
+.icon
+    padding-bottom: 52rem
+    @extend %transition-shared
+    transition: 1s cubic-bezier(0, 1, 0.5, 1)
+
+    svg
+        width: 41rem
+        height: 41rem
+        @include mixins.adaptive-container(420px, 25rem)
+        @include mixins.adaptive-height(420px, 25rem)
+        cursor: pointer
+        path
+            fill: #008294 !important
+            transition: fill 0.3s ease
+            &:hover
+                fill: variables.$bg-color-red !important
+
+// Friendships
+
+.friendships
+    @include mixins.flex(28rem, center, flex-start)
+    @include mixins.adaptive-gap(420px, 27rem)
+    flex-direction: column
+    margin-bottom: 64rem
+    @include mixins.adaptive-margin(768px, 0rem 0rem 83rem 0rem)
+    @include mixins.adaptive-margin(420px, 0rem 0rem 103rem 0rem)
+    @include mixins.adaptive-padding(420px, 0 0 0 12rem)
+
+    p
+        color: variables.$text-color-grey
+
+.friendships-title
+    @include mixins.flex(16rem, center, flex-start)
+    flex-direction: column
+
+    p
+        width: 60%
+        @include mixins.adaptive-container(768px, 70%)
+        @include mixins.adaptive-visibility(420px, none)
+
+.friendships-containers
+    @include mixins.flex(32rem, space-between, flex-start)
+    @include mixins.adaptive-flex-direction(768px, column)
+    @include mixins.adaptive-flex-wrap(1196px, wrap)
+
+.friendships-container
+    @include mixins.flex(24rem, center, flex-start)
+    @include mixins.adaptive-gap(420px, 23rem)
+    flex-direction: column
+    width: 33%
+    @include mixins.adaptive-container(1196px, 48%)
+    @include mixins.adaptive-container(768px, 100%)
+
+    img
+        width: 100%
+        border-radius: 8px
+        max-width: 376px
+        max-height: 191px
+        @include mixins.adaptive-container(420px, 100%)
+        @include mixins.adaptive-height(420px, auto)
+        @extend %transition-shared
+        &:hover
+            scale: 1.05
+
+.friendships-description
+    @include mixins.flex(12rem, center, flex-start)
+    flex-direction: column
+    @include mixins.adaptive-container(1196px, 80%)
+    @include mixins.adaptive-container(768px, 55%)
+    @include mixins.adaptive-container(420px, 70%)
+
+    a
+        margin-top: 4rem

@@ -1,0 +1,68 @@
+// section Events Screen
+    
+@use 'variables'
+@use 'mixins'
+@use 'component_events_info_main'
+ 
+
+.container-events
+       @include mixins.flex(40rem) 
+       flex-direction: column
+       margin-bottom: 40rem
+
+.events-container
+    @include mixins.flex(24rem, center, start)
+    flex-direction: column
+    width: 100%
+
+.events-title
+    width: 100%
+    @include mixins.flex(0, space-between, center)
+
+
+.events-description
+    @include mixins.flex(20rem, flex-start)
+    @include mixins.adaptive-gap(420px, 13rem)
+
+    h2
+        font-weight: 600
+        line-height: 129%
+        font-size: variables.$font-size-h2
+        color: variables.$text-color-light-black
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h2-small)
+
+    .place-title
+        background-color: variables.$bg-color-ligth-green-12
+        padding: 12rem 10rem 8rem 12rem
+        border-radius: 8px
+        @include mixins.flex(8px, space-between)
+        @include mixins.adaptive-gap(420px, 6px)
+        @include mixins.adaptive-padding(420px, 8px 8px 6px)
+
+        h3
+            font-weight: 600
+            line-height: 120%
+            font-size: variables.$font-size-h3
+            color: variables.$text-color-green
+            @include mixins.adaptive-font-size(420px, variables.$font-size-h3-small)
+
+.events-see-all-button
+    border: none
+    cursor: pointer
+    background-color: variables.$color-white
+    font-size: variables.$font-size-p
+    font-weight: 500
+    line-height: 150%
+    text-align: center
+    color: variables.$text-color-green 
+    @include mixins.adaptive-visibility(520px, none)
+    @include mixins.adaptive-visibility(420px, none)
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
+    transform-origin: center center        
+    &:hover
+        color: variables.$text-color-red
+        scale: 1.1
+
+
+
+    

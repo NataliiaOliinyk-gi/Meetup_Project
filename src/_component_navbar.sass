@@ -1,0 +1,154 @@
+// navbar
+    
+@use 'variables'
+@use 'mixins'
+
+%placeholder-shared   
+    font-weight: 400
+    font-size: variables.$font-size-placeholder 
+
+%text-button-shared   
+    font-weight: 500
+    font-size: variables.$font-size-button
+    @include mixins.adaptive-font-size(420px, variables.$font-size-button-small)
+    line-height: 143%
+    text-align: center
+
+%transition-shared
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
+    transform-origin: center center
+    &:hover
+        scale: 1.1  
+
+nav 
+    width: 100%
+    @include mixins.flex(0, space-between)
+    padding: 11rem 24rem
+    @include mixins.adaptive-flex-wrap(768px, wrap)
+    @include mixins.adaptive-padding(420px, 4px 8px 4px 24px)
+
+.container-nav-logo
+    @include mixins.flex(0)
+    @include mixins.adaptive-oder(768px, 0)
+    margin-right: 35rem
+    @include mixins.adaptive-margin(420px, 0)
+
+    a
+        img
+            @extend %transition-shared
+            transition: 3s cubic-bezier(0, 1, 0.5, 1)
+            &:hover
+                scale: 1.2
+
+.container-nav-search-box 
+    @include mixins.flex(0, start)
+    @include mixins.adaptive-oder(768px, 3)
+    @include mixins.adaptive-margin(768px, 15px 0)
+    @include mixins.adaptive-margin(420px, 15px 20px 15px 0)
+    width: 592rem
+    border: 1px solid #d9d9d9
+    border-radius: 8px
+    &:hover
+        background-color: variables.$bg-color-dark-white
+
+    img
+        width: 22px
+        height: 22px
+        margin-left: 10px
+    
+    input
+        height: 42px
+        border: none
+        outline: none
+        @include mixins.transition(400ms)
+        &::placeholder
+            @extend %placeholder-shared
+        &:hover
+            background-color: variables.$bg-color-dark-white
+
+    button
+        border-radius: 0 8px 8px 0
+        width: 42px
+        height: 42px
+        border: 1px solid variables.$bg-color-red
+        background-color: variables.$bg-color-red
+        cursor: pointer
+        @include mixins.transition(400ms)
+        @include mixins.flex(0)
+        @extend %transition-shared
+        &:hover
+            background-color: variables.$bg-color-green
+            border-color: variables.$bg-color-green
+        
+        img
+            width: 20px
+            height: 20px
+            margin: 0
+
+    #searchEvents
+        width: 45%
+        @include mixins.adaptive-container(420px, 90%)
+        padding: 13rem 24rem 13rem 5rem
+        border-right: 1px solid #d9d9d9
+        &::placeholder
+            color: variables.$placeholder-color-grey
+
+    #searchCity
+        width: 45%
+        @include mixins.adaptive-visibility(420px, none)
+        padding: 13rem 9rem 13rem 17rem
+        &::placeholder
+            color: variables.$placeholder-color-black
+            
+    
+.container-nav-empty
+    width: 30%
+    @include mixins.adaptive-container(1440px, 15%) 
+    @include mixins.adaptive-container(1024px, 8%)
+    @include mixins.adaptive-container(768px, 0%) 
+
+
+.container-nav-login
+    @include mixins.flex(21rem, end)
+    @include mixins.adaptive-oder(768px, 2)
+    @include mixins.adaptive-gap(390px, 18px)
+    margin-right: 26rem
+    @include mixins.adaptive-margin(768px, 0)
+
+    button
+        border: none
+        cursor: pointer
+        white-space: nowrap
+        background-color: variables.$color-white
+        color: variables.$text-color-light-black
+        @extend %text-button-shared
+
+.box-language-logo
+    @include mixins.flex(4px)
+    @extend %transition-shared
+    &:hover
+        #languageNavMenu
+            color: variables.$text-color-red
+    img
+        width: 20px
+        height: 20px
+
+#logInNavMenu
+    @extend %transition-shared
+    &:hover
+        color: variables.$text-color-red
+
+#signUpNavMenu
+    padding: variables.$padding-button
+    border-radius: 8px
+    color: variables.$tabs-color-white
+    background-color: variables.$bg-color-green
+    @extend %transition-shared
+    &:hover
+        background-color: variables.$bg-color-red
+        scale: 1.05
+        box-shadow: 4px 0px 4px 0px #00000050
+
+ 
+    
+        
