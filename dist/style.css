@@ -1755,11 +1755,6 @@ footer {
     width: 100%;
   }
 }
-@media (max-width: 420px) {
-  .events-info {
-    width: 370rem;
-  }
-}
 
 #eventsInfo h5 {
   font-weight: 500;
