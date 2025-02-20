@@ -3,7 +3,7 @@ const eventsMain = [
         title: "Day Trading Idea and Strategy",
         description: "Business",
         date: new Date(2024, 2, 18, 19, 0), // MON, MAR 18 - 7:00 PM PDT
-        image: "../assets/img/events/event_1.png",
+        image: "assets/img/events/event_1.png",
         type: "offline",
         attendees: 1,
         category: "Business",
@@ -13,7 +13,7 @@ const eventsMain = [
         title: "Let's Talk Networking: JPMorgan Chase in Palo Alto",
         description: "Business",
         date: new Date(2024, 2, 19, 17, 0), // TUE, MAR 19 - 5:00 PM PDT
-        image: "../assets/img/events/event_2.png",
+        image: "assets/img/events/event_2.png",
         type: "offline",
         attendees: 41,
         category: "Business",
@@ -23,7 +23,7 @@ const eventsMain = [
         title: "Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases",
         description: "Technology",
         date: new Date(2024, 2, 13, 18, 0), // WED, MAR 13 - 6:00 PM PDT
-        image: "../assets/img/events/event_3.png",
+        image: "assets/img/events/event_3.png",
         type: "online",
         attendees: 40,
         category: "Technology",
@@ -33,7 +33,7 @@ const eventsMain = [
         title: "INFORMS San Francisco Chapter In-Person Event",
         description: "Health and Wellbeing",
         date: new Date(2024, 2, 28, 17, 0), // THU, MAR 28 - 5:00 PM PDT
-        image: "../assets/img/events/event_4.png",
+        image: "assets/img/events/event_4.png",
         type: "offline",
         attendees: 41,
         category: "Health and Wellbeing",
@@ -43,7 +43,7 @@ const eventsMain = [
         title: "AI Wednesdays - Meet and Greet!",
         description: "Technology",
         date: new Date(2024, 2, 13, 18, 30), // WED, MAR 13 - 6:30 PM PDT
-        image: "../assets/img/events/event_5.png",
+        image: "assets/img/events/event_5.png",
         type: "offline",
         attendees: 29,
         category: "Technology",
@@ -53,7 +53,7 @@ const eventsMain = [
         title: "ROS By-The-Bay March 2024",
         description: "Social Activities",
         date: new Date(2024, 2, 21, 18, 0), // THU, MAR 21 - 6:00 PM PDT
-        image: "../assets/img/events/event_6.png",
+        image: "assets/img/events/event_6.png",
         type: "online",
         attendees: 51,
         category: "Social Activities",
@@ -63,7 +63,7 @@ const eventsMain = [
         title: "Free Christian Singles' Dinner",
         description: "Hobbies and Passions",
         date: new Date(2024, 2, 29, 18, 0), // FRI, MAR 29 - 6:00 PM PDT
-        image: "../assets/img/events/event_7.png",
+        image: "assets/img/events/event_7.png",
         type: "offline",
         attendees: 11,
         category: "Hobbies and Passions",
@@ -73,7 +73,7 @@ const eventsMain = [
         title: "In-person: Deep Dive into RAG Architectures (Food served)",
         description: "Hobbies and Passions",
         date: new Date(2024, 2, 14, 17, 0), // THU, MAR 14 - 5:00 PM PDT
-        image: "../assets/img/events/event_8.png",
+        image: "assets/img/events/event_8.png",
         type: "offline",
         attendees: 16,
         category: "Hobbies and Passions",
@@ -86,7 +86,7 @@ const onlineEvents = [
         title: "Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers",
         description: "Business",
         date: new Date(2024, 2, 14, 18, 0), // THU, MAR 14 - 6:00 PM PDT
-        image: "../assets/img/events/event_1_1.png",
+        image: "assets/img/events/event_1_1.png",
         type: "online",
         attendees: 3,
         category: "Business",
@@ -96,7 +96,7 @@ const onlineEvents = [
         title: "Vision Pro Developers Online Meetup",
         description: "Technology",
         date: new Date(2024, 2, 13, 19, 0), // WED, MAR 13 - 7:00 PM PDT
-        image: "../assets/img/events/event_1_2.png",
+        image: "assets/img/events/event_1_2.png",
         type: "online",
         attendees: 51,
         category: "Technology",
@@ -106,7 +106,7 @@ const onlineEvents = [
         title: "Significant Musical Moments",
         description: "Hobbies and Passions",
         date: new Date(2024, 2, 13, 18, 0), // WED, MAR 13 - 6:00 PM PDT
-        image: "../assets/img/events/event_1_3.png",
+        image: "assets/img/events/event_1_3.png",
         type: "online",
         attendees: 16,
         category: "Hobbies and Passions",
@@ -116,7 +116,7 @@ const onlineEvents = [
         title: "FREE Webinar: Introduction to Power BI",
         description: "Technology",
         date: new Date(2024, 2, 14, 17, 30), // THU, MAR 14 - 5:30 PM PDT
-        image: "../assets/img/events/event_1_4.png",
+        image: "assets/img/events/event_1_4.png",
         type: "online",
         attendees: 33,
         category: "Technology",
