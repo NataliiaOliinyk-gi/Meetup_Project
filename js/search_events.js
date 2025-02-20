@@ -96,13 +96,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Информация о дате и времени мероприятия
             const eventDate = document.createElement('p');
-            eventDate.classList.add('event-date')
+            eventDate.classList.add('event-date');
             // получаем дату и время для вывода на экран
             const formattedDate = getInputAndSetDate(element.date);
             eventDate.textContent = formattedDate;
 
             // Информация о названии мероприятия
             const eventTitle = document.createElement('h5');
+            eventTitle.classList.add('event-title-h5');
             eventTitle.textContent = element.title;
 
             // Информация о категории мероприятия

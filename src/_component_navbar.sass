@@ -20,6 +20,15 @@
     &:hover
         scale: 1.1  
 
+%box-shadow-shared
+    box-shadow: 4px 0px 4px 0px #00000050
+
+#header
+    position: sticky
+    top: 0px
+    z-index: 100
+    @extend %box-shadow-shared
+
 nav 
     width: 100%
     @include mixins.flex(0, space-between)
@@ -147,7 +156,7 @@ nav
     &:hover
         background-color: variables.$bg-color-red
         scale: 1.05
-        box-shadow: 4px 0px 4px 0px #00000050
+        @extend %box-shadow-shared
 
  
     

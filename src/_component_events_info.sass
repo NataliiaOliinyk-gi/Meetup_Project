@@ -1,16 +1,16 @@
 // Events INFO
-    
+
 @use 'variables'
 @use 'mixins'
 
 %transition-shared
-    transition: 3s cubic-bezier(0, 1, 0.5, 1)
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
     transform-origin: center center
     &:hover
         scale: 1.1
 
 %icons-before-shared
-    display: inline-flex 
+    display: inline-flex
     gap: 3px
     align-items: center
     &::before
@@ -20,29 +20,14 @@
         @include mixins.adaptive-container(420px, 10px)
         @include mixins.adaptive-height(420px, 10px)
 
+%box-shadow-shared
+    box-shadow: 4px 0px 4px 0px #00000050
+
 .events-info
     @include mixins.flex(17rem, center, start)
     flex-direction: column
     width: 604px
     @include mixins.adaptive-container(768px, 100%)
-
-#eventsInfo
-    h5
-        font-weight: 500
-        font-size: variables.$font-size-p-const
-        @include mixins.adaptive-font-size(420px, variables.$font-size-h5-small)
-        line-height: 150%
-        color: variables.$text-color-light-black
-        &:hover
-            color: variables.$text-color-red
-
-    p
-        font-weight: 500
-        font-size: variables.$font-size-a-const
-        @include mixins.adaptive-font-size(420px, variables.$font-size-p-adaptiv8)
-        line-height: 143%
-        color: variables.$text-color-grey
-
 
 .event-info
     position: relative
@@ -52,22 +37,40 @@
     border-top: 1px solid #d9d9d9
     padding: 16rem 0 0 0
     @include mixins.adaptive-padding(420px, 10rem 0 0 0)
+    @extend %transition-shared
+    &:hover
+        @extend %box-shadow-shared
+    &:hover .event-title-h5
+        color: variables.$text-color-red
+
+    .event-title-h5
+        width: 95%
+        font-weight: 500
+        font-size: variables.$font-size-p-const
+        @include mixins.adaptive-font-size(420px, variables.$font-size-h5-small)
+        line-height: 150%
+        color: variables.$text-color-light-black
+
+#eventsInfo
+    p
+        font-weight: 500
+        font-size: variables.$font-size-a-const
+        @include mixins.adaptive-font-size(420px, variables.$font-size-p-adaptiv8)
+        line-height: 143%
+        color: variables.$text-color-grey
 
 .event-image-box
     height: 144px
     @include mixins.adaptive-height(420px, 86rem)
-    @extend %transition-shared
-    
+
     .event-image
         border-radius: 8px
         width: 159px
         @include mixins.adaptive-container(420px, 97rem)
 
-
 .event-descriptions
     @include mixins.flex(4px, center, start)
     flex-direction: column
-
 
 #eventsInfo
     .event-date
@@ -82,7 +85,6 @@
     margin-top: 48rem
     @include mixins.adaptive-margin(420px, 28rem 0 0 0)
 
-    
 .event-online
     position: absolute
     top: 23rem
@@ -94,8 +96,8 @@
     border-radius: 4px
     padding: 2px 4px
     @include mixins.adaptive-padding(420px, 2px 4px 2px 0)
-    background-color: variables.$color-white 
-    
+    background-color: variables.$color-white
+
     .title-p
         font-weight: 500
         font-size: variables.$font-size-p-const-small
@@ -107,4 +109,3 @@
         &::before
             content: url('../../assets/icons/icon_online.svg')
             @include mixins.adaptive-content(420px, url('../../assets/icons/icon_online_small.svg'))
-            
