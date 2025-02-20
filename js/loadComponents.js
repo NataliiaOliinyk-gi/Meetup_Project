@@ -30,10 +30,10 @@ function setActiveLink() {
 // Ожидаем полной загрузки DOM
 document.addEventListener("DOMContentLoaded", function () {
     // Загружаем `header.html` в контейнер `#header`, затем вызываем `setActiveLink()`
-    loadComponent("#header", "../components/header.html", setActiveLink);
+    loadComponent("#header", "components/header.html", setActiveLink);
 
     // Загружаем `footer.html` в контейнер `#footer`
-    loadComponent("#footer", "../components/footer.html");
+    loadComponent("#footer", "components/footer.html");
 
 
 
