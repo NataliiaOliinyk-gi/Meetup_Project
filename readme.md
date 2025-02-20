@@ -1,4 +1,4 @@
-[Meetup_Project](https://nataliiaoliinyk-gi.github.io/Meetup_Project/)
+**[Meetup_Project](https://nataliiaoliinyk-gi.github.io/Meetup_Project/)**
 
 # Study project (HTML, CSS, SASS, JavaScript)
 
