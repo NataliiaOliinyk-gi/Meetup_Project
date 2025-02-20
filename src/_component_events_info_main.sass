@@ -102,7 +102,7 @@
         @include mixins.adaptive-oder(420px, 0)
         @extend %icons-before-shared
         &::before
-            content: url('../../assets/icons/icon_data.svg')
+            content: url('../assets/icons/icon_data.svg')
             @include mixins.adaptive-visibility(420px, none)
 
         p
@@ -121,7 +121,7 @@
             @include mixins.adaptive-font(420px, 400, variables.$font-size-p-adaptiv8, 143%, variables.$text-color-grey)
             @include mixins.adaptive-gap(420px, 4rem)
             &::before
-                content: url('../../assets/icons/icon_ok.svg')
+                content: url('../assets/icons/icon_ok.svg')
                 @include mixins.adaptive-visibility(420px, none)
 
                 font-weight: 400
@@ -145,7 +145,7 @@
             @extend %icons-before-shared
             @include mixins.adaptive-visibility(420px, none)
             &::before
-                content: url('../../assets/icons/icon_tiket.svg')
+                content: url('../assets/icons/icon_tiket.svg')
 
     .event-online-main
         position: absolute
@@ -172,8 +172,8 @@
         @extend %icons-before-shared
         gap: 3px
         &::before
-            content: url('../../assets/icons/icon_online.svg')
-            @include mixins.adaptive-content(420px, url('../../assets/icons/icon_online_small.svg'))
+            content: url('../assets/icons/icon_online.svg')
+            @include mixins.adaptive-content(420px, url('../assets/icons/icon_online_small.svg'))
             width: 18px
             height: 18px
             @include mixins.adaptive-container(420px, 10px)

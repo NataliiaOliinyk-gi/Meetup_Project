@@ -811,7 +811,7 @@ footer {
   }
 }
 .event-info-main .item-date-main::before {
-  content: url("../../assets/icons/icon_data.svg");
+  content: url("../assets/icons/icon_data.svg");
 }
 @media (max-width: 420px) {
   .event-info-main .item-date-main::before {
@@ -861,7 +861,7 @@ footer {
   }
 }
 .event-info-main .item-other-main .event-attendees-main::before {
-  content: url("../../assets/icons/icon_ok.svg");
+  content: url("../assets/icons/icon_ok.svg");
   font-weight: 400;
   line-height: 150%;
   font-size: 16rem;
@@ -899,7 +899,7 @@ footer {
   }
 }
 .event-info-main .item-other-main .event-pay::before {
-  content: url("../../assets/icons/icon_tiket.svg");
+  content: url("../assets/icons/icon_tiket.svg");
 }
 .event-info-main .event-online-main {
   position: absolute;
@@ -957,13 +957,13 @@ footer {
   }
 }
 .event-info-main .type-title::before {
-  content: url("../../assets/icons/icon_online.svg");
+  content: url("../assets/icons/icon_online.svg");
   width: 18px;
   height: 18px;
 }
 @media (max-width: 420px) {
   .event-info-main .type-title::before {
-    content: url("../../assets/icons/icon_online_small.svg");
+    content: url("../assets/icons/icon_online_small.svg");
   }
 }
 @media (max-width: 420px) {
@@ -1908,11 +1908,11 @@ footer {
   }
 }
 .event-online .title-p::before {
-  content: url("../../assets/icons/icon_online.svg");
+  content: url("../assets/icons/icon_online.svg");
 }
 @media (max-width: 420px) {
   .event-online .title-p::before {
-    content: url("../../assets/icons/icon_online_small.svg");
+    content: url("../assets/icons/icon_online_small.svg");
   }
 }
 
@@ -2012,7 +2012,7 @@ footer {
   cursor: pointer;
   appearance: none;
   background-color: #f6f7f8;
-  background-image: url("../../assets/icons/icon_arrow.svg");
+  background-image: url("../assets/icons/icon_arrow.svg");
   background-repeat: no-repeat;
   background-position: right 14px center;
   font-weight: 500;
@@ -2098,7 +2098,7 @@ footer {
   border-radius: 12px;
   width: 350rem;
   height: 285rem;
-  background-image: url("../../assets/img/map.png");
+  background-image: url("../assets/img/map.png");
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
@@ -2140,7 +2140,7 @@ footer {
   box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.3137254902);
 }
 .search-map-image button::after {
-  content: url("../../assets/icons/icon_fill.svg");
+  content: url("../assets/icons/icon_fill.svg");
 }
 .search-map-image img {
   position: absolute;
