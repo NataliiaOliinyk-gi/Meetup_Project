@@ -81,6 +81,16 @@ html {
   scale: 1.1;
 }
 
+#signUpNavMenu:hover, #header {
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.3137254902);
+}
+
+#header {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -289,7 +299,6 @@ nav {
 #signUpNavMenu:hover {
   background-color: #f65858;
   scale: 1.05;
-  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.3137254902);
 }
 
 .footer-about a, .footer-about p, .footer-descriptions a {
@@ -592,7 +601,7 @@ footer {
 }
 
 .event-info-main {
-  transition: 3s cubic-bezier(0, 1, 0.5, 1);
+  transition: 0.7s cubic-bezier(0, 1, 0.5, 1);
   transform-origin: center center;
 }
 .event-info-main:hover {
@@ -608,6 +617,10 @@ footer {
   display: inline-block;
   width: 20px;
   height: 20px;
+}
+
+.event-info-main:hover {
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.3137254902);
 }
 
 .events {
@@ -727,8 +740,8 @@ footer {
     padding: 16rem 0 0 0;
   }
 }
-.event-info-main:hover {
-  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.3137254902);
+.event-info-main:hover .event-descriptions-main h3 {
+  color: #f65858;
 }
 .event-info-main .event-descriptions-main {
   display: flex;
@@ -834,11 +847,6 @@ footer {
     margin: 20rem 0 0 0;
   }
 }
-.event-info-main .item-other-main .event-attendees-main {
-  font-weight: 400;
-  line-height: 150%;
-  font-size: 16rem;
-}
 @media (max-width: 420px) {
   .event-info-main .item-other-main .event-attendees-main {
     font-weight: 400;
@@ -854,6 +862,9 @@ footer {
 }
 .event-info-main .item-other-main .event-attendees-main::before {
   content: url("../../assets/icons/icon_ok.svg");
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 16rem;
 }
 @media (max-width: 420px) {
   .event-info-main .item-other-main .event-attendees-main::before {
@@ -1713,11 +1724,11 @@ footer {
   margin-top: 4rem;
 }
 
-.search-filters-box select, .display-info button, .search-map-image button, .search-map-image img, .event-image-box {
-  transition: 3s cubic-bezier(0, 1, 0.5, 1);
+.search-filters-box select, .display-info button, .search-map-image button, .search-map-image img, .event-info {
+  transition: 0.7s cubic-bezier(0, 1, 0.5, 1);
   transform-origin: center center;
 }
-.search-filters-box select:hover, .display-info button:hover, .search-map-image button:hover, .search-map-image img:hover, .event-image-box:hover {
+.search-filters-box select:hover, .display-info button:hover, .search-map-image button:hover, .search-map-image img:hover, .event-info:hover {
   scale: 1.1;
 }
 
@@ -1742,6 +1753,10 @@ footer {
   }
 }
 
+.event-info:hover {
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.3137254902);
+}
+
 .events-info {
   display: flex;
   justify-content: center;
@@ -1753,32 +1768,6 @@ footer {
 @media (max-width: 768px) {
   .events-info {
     width: 100%;
-  }
-}
-
-#eventsInfo h5 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  color: #212121;
-}
-@media (max-width: 420px) {
-  #eventsInfo h5 {
-    font-size: 9px;
-  }
-}
-#eventsInfo h5:hover {
-  color: #f65858;
-}
-#eventsInfo p {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 143%;
-  color: #707070;
-}
-@media (max-width: 420px) {
-  #eventsInfo p {
-    font-size: 8px;
   }
 }
 
@@ -1796,6 +1785,33 @@ footer {
 @media (max-width: 420px) {
   .event-info {
     padding: 10rem 0 0 0;
+  }
+}
+.event-info:hover .event-title-h5 {
+  color: #f65858;
+}
+.event-info .event-title-h5 {
+  width: 95%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #212121;
+}
+@media (max-width: 420px) {
+  .event-info .event-title-h5 {
+    font-size: 9px;
+  }
+}
+
+#eventsInfo p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: #707070;
+}
+@media (max-width: 420px) {
+  #eventsInfo p {
+    font-size: 8px;
   }
 }
 

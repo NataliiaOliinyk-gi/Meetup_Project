@@ -1,24 +1,25 @@
 // Events INFO
-    
+
 @use 'variables'
 @use 'mixins'
 
-
 %transition-shared
-    transition: 3s cubic-bezier(0, 1, 0.5, 1)
+    transition: 0.7s cubic-bezier(0, 1, 0.5, 1)
     transform-origin: center center
     &:hover
         scale: 1.1
 
 %icons-before-shared
-    display: inline-flex 
+    display: inline-flex
     gap: 6px
     align-items: center
     &::before
         display: inline-block
         width: 20px
         height: 20px
-    
+
+%box-shadow-shared
+    box-shadow: 4px 0px 4px 0px #00000050
 
 .events
     width: 100%
@@ -54,8 +55,6 @@
         @include mixins.adaptive-container(553px, 159px)
         @include mixins.adaptive-height(553px, auto)
         @include mixins.adaptive-container(420px, 97rem)
-        
-
 
 .event-info-main
     position: relative
@@ -74,8 +73,9 @@
     cursor: pointer
     @extend %transition-shared
     &:hover
-        box-shadow: 4px 0px 4px 0px #00000050
-
+        @extend %box-shadow-shared
+    &:hover .event-descriptions-main h3
+        color: variables.$text-color-red
 
     .event-descriptions-main
         @include mixins.flex(12rem, start, start)
@@ -84,7 +84,7 @@
         @include mixins.adaptive-gap(420px, 2rem)
 
         h3
-            width: 85% 
+            width: 85%
             @include mixins.adaptive-container(553px, 98%)
             @include mixins.adaptive-oder(420px, 1)
             @include mixins.adaptive-font(420px, 500, variables.$font-size-h5-small, 150%, variables.$text-color-light-black)
@@ -97,16 +97,16 @@
         p
             color: variables.$text-color-grey
             @include mixins.adaptive-font(420px, 400, variables.$font-size-p-adaptiv8, 143%, variables.$text-color-grey)
-            
-    .item-date-main 
+
+    .item-date-main
         @include mixins.adaptive-oder(420px, 0)
-        @extend %icons-before-shared    
+        @extend %icons-before-shared
         &::before
             content: url('../../assets/icons/icon_data.svg')
             @include mixins.adaptive-visibility(420px, none)
-                
-        p   
-            font-weight: 400    
+
+        p
+            font-weight: 400
             letter-spacing: -0.02em
             text-transform: uppercase
             @include mixins.adaptive-font(420px, 500, variables.$font-size-p-adaptiv8, 143%, variables.$text-color-braun-grey)
@@ -115,7 +115,7 @@
         @include mixins.flex(16rem, start)
         @include mixins.adaptive-oder(420px, 5)
         @include mixins.adaptive-margin(420px, 20rem 0 0 0)
-        
+
         .event-attendees-main
             @extend %icons-before-shared
             @include mixins.adaptive-font(420px, 400, variables.$font-size-p-adaptiv8, 143%, variables.$text-color-grey)
@@ -124,9 +124,9 @@
                 content: url('../../assets/icons/icon_ok.svg')
                 @include mixins.adaptive-visibility(420px, none)
 
-            font-weight: 400
-            line-height: 150%
-            font-size: variables.$font-size-p
+                font-weight: 400
+                line-height: 150%
+                font-size: variables.$font-size-p
 
         .attendees-text
             font-weight: 400
@@ -161,7 +161,6 @@
         @include mixins.adaptive-padding(420px, 2px 4px 2px 0)
         background-color: variables.$color-white
         @include mixins.adaptive-oder(420px, 4)
-        
 
     .type-title
         font-weight: 500
@@ -180,13 +179,12 @@
             @include mixins.adaptive-container(420px, 10px)
             @include mixins.adaptive-height(420px, 10px)
 
-
 #eventsNear
-    & > *:nth-child(n+7) 
+    & > *:nth-child(n+7)
         @include mixins.adaptive-visibility(1196px, none)
-        @include mixins.adaptive-visibility(553px, flex) 
+        @include mixins.adaptive-visibility(553px, flex)
 
-#eventsOnline  
-    & > *:nth-child(n+4) 
+#eventsOnline
+    & > *:nth-child(n+4)
         @include mixins.adaptive-visibility(1196px, none)
-        @include mixins.adaptive-visibility(846px, flex)         
+        @include mixins.adaptive-visibility(846px, flex)
