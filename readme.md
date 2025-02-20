@@ -1,3 +1,5 @@
+[Meetup_Project](https://nataliiaoliinyk-gi.github.io/Meetup_Project/)
+
 # Study project (HTML, CSS, SASS, JavaScript)
 
 # Abschlussprojekt des Frontend-Kurses (HTML, CSS, SASS, JavaScript)
